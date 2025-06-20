@@ -16,7 +16,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")  // Apply CORS to all endpoints
-                .allowedOrigins("https://ai-email-reply-generator-frontend.vercel.app") // PROD: Replace with your frontend URL
-                .allowedMethods("*");
+                .allowedOrigins("https://ai-email-reply-generator-frontend-b5lz3j5yx.vercel.app/") // PROD: Replace with your frontend URL
+                .allowedMethods("*")
+                .allowedHeaders("*")
+                .allowCredentials(false);
     }
 }
